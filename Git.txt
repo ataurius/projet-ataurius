@@ -1,0 +1,73 @@
+    COMMANDES POUR L'INSTALLATION
+
+sudo apt-get install git
+
+        //installe automatiquement la dernière version
+        //demande de MDP
+        //demande de confirmation 
+
+git --version
+
+        //affiche la version installée
+
+git config --global user.name "nomutilisateur"
+
+        //le "--global" permet de configurer git pour tous les projets qui seront créés". A retirer pour configurer seulement un projet
+
+git config --global user.email "emailutilisateur"
+
+git congif --global color.diff auto
+
+git congif --global color.status auto
+
+git congif --global color.branch auto
+
+git config --global core.editor vim
+
+        //"vim" est l'éditeur fixé par défaut
+
+git config --global merge.tool vimdiff
+
+        //outil de merge par défaut
+
+git config --list
+
+    COMMANDES POUR L'UTILISATION
+
+    1-Créer un dossier pour votre projet :
+
+cd Documents
+
+        //la commande cd (changedirectory) ouvre votre dossier "Documents"
+
+mkdir ProjetAtaurius
+
+        //la commande mkdir (makedirectory) permet de créer le dossier "ProjetAtaurius"
+
+cd ProjetAtaurius
+        
+        //la commande "cd" ouvre le dossier ProjetAtaurius 
+
+git init 
+
+        //initialise le dépôt git en créant un dossier caché ".git" contenant sa config, ses objets et son pointeur
+        //"git config --global init.defaultBranch <nom>" permet de configurer le nom de la branch initiale 
+        //"git branch -m <nom>" permet de renommer la branche nouvellement créée
+
+touch index.html
+
+        //la commande "touch" crée le fichier html 
+
+git status 
+
+        //permet de voir les modifications apportées dans le projet qui n'ont pas encore été indexées
+        //le fichier index.html apparaît en rouge
+
+git add index.html
+
+        //ajoute la modification à l'index (ou "stage")
+        //"git add *" ajoute toutes les modifications à l'index
+
+git status
+
+        //le fichier index.html apparaît en vert
