@@ -151,12 +151,10 @@ git merge langagejava
 
     AUTRES COMMANDES 
 
-git clone https://github.com/ataurius/projet-ataurius.git
-
+git clone https://github.com/ataurius/projet-ataurius.git   
         //copie un dépôt distant depuis GitHub
 
 git pull ProjetAtaurius main
-
         //permet de voir s'il y a des MAJ depuis le dépôt distant à intégrer dans le dépôt local
 
 git branch -d langagejava
@@ -168,16 +166,14 @@ git branch -M main
 git branch -D langagejava
         //supprime la branche avec ses modifications éventuellement effectuer
 
+git commit --amend -m "Votre nouveau message de commit"
+        //permet de modifier le message du dernier commit s'il n'y a eu aucune modification
+
 
     PROTOCOLES
 
     
-    1-Annuler une modification de la branche main
-
-cd ProjetAtaurius
-git bcheckout main
-touch FichierIndesirable.txt
-git add *
+    1-Annuler une modification de la branche main (sans commit effectué)
 
         //la modification a été ajoutée à l'index MAIS n'a pas été "committée"
 
@@ -200,6 +196,27 @@ git stash list
     //copier la remise souhaitée (juste le début de pattern "stash@{1}:...")
 
 git stash apply nomdelaremise
+
+
+    2-Annuler une modification de la branche main (avec commit effectué)
+
+git log
+
+    //affiche l'historique des commit avec leur identifiant ("hash") (exemple : commit 88af3e1ebc7b24e111a28d51527a290e798f3ea2)
+
+git reset --hard HEAD^
+
+        //supprime le dernier commit de la branche principale
+
+git branch nouvellebranche
+
+git checkout nouvelle branche
+
+git reset --hard 88af3e1e
+
+        //les 8 premeirs caractères suffisent
+git 
+
 
 
     NOTES
