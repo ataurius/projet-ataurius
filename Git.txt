@@ -1,5 +1,6 @@
     COMMANDES POUR L'INSTALLATION
 
+
 sudo apt-get install git
 
         //installe automatiquement la dernière version
@@ -32,7 +33,9 @@ git config --global merge.tool vimdiff
 
 git config --list
 
+
     COMMANDES POUR L'UTILISATION
+
 
     1-Créer un dossier pour votre projet :
 
@@ -56,6 +59,7 @@ git init
         //initialise le dépôt git en créant un dossier caché ".git" contenant sa config, ses objets et son pointeur
         //"git config --global init.defaultBranch <nom>" permet de configurer le nom de la branch initiale 
         //"git branch -m <nom>" permet de renommer la branche nouvellement créée
+
 
     3-Exemple : Comportement de Git  
 
@@ -85,3 +89,35 @@ git commit -m "message descriptif"
 git branch
 
         //permet de voir que la branche "*master" vient d'être créer ("*" indique la branche sur laquelle vous travaillez actuellement) 
+
+    4-Relier le dépôt local Git au dépôt distant GitHub
+        
+    //nécessite la création d'un compte GitHub, et d'un new repository (lien du repository à copier)
+    //nécessite de créer une clé tokken (voir les "developper settings" du menu "setting" de GitHub)
+
+git remote add ProjetAtaurius https://github.com/ataurius/projet-ataurius.git
+
+git branch -M main
+
+    //relie le dépôt local au dépôt distant
+
+git push -u ProjetAtaurius main
+
+    //envoie le projet sur le dépôt distant
+
+
+    4-Gestion des branches
+    
+    //"git branch" affiche les branches    
+    //rappel : "*" indique la branche sur laquelle vous travaillez
+
+git branch
+
+git branch langagejava
+
+git branch
+
+git checkout langagejava
+
+git branch
+
