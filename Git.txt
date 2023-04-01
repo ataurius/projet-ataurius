@@ -172,7 +172,7 @@ git branch -D langagejava
     PROTOCOLES
 
     
-    1-Annuler une modification de la branche main
+    1-Annuler une modification de la branche main (sans commit effectué)
 
 cd ProjetAtaurius
 git bcheckout main
@@ -200,6 +200,11 @@ git stash list
     //copier la remise souhaitée (juste le début de pattern "stash@{1}:...")
 
 git stash apply nomdelaremise
+
+
+    1-Annuler une modification de la branche main (avec commit effectué)
+
+git log
 
 
     NOTES
