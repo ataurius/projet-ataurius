@@ -48,20 +48,25 @@ cd ProjetAtaurius
         
         //la commande "cd" ouvre le dossier ProjetAtaurius 
 
+
+    2-Initiliser le dépôt git du projet
+
 git init 
 
         //initialise le dépôt git en créant un dossier caché ".git" contenant sa config, ses objets et son pointeur
         //"git config --global init.defaultBranch <nom>" permet de configurer le nom de la branch initiale 
         //"git branch -m <nom>" permet de renommer la branche nouvellement créée
 
+    3-Exemple : Comportement de Git  
+
 touch index.html
 
-        //la commande "touch" crée le fichier html 
+        //la commande "touch" crée le fichier "index.html" 
 
 git status 
 
-        //permet de voir les modifications apportées dans le projet qui n'ont pas encore été indexées
-        //le fichier index.html apparaît en rouge
+        //permet de voir les modifications apportées dans le projet (projet préalablement initialisé avec la commande "git init") qui n'ont pas encore été indexées
+        //le fichier "index.html" apparaît en rouge
 
 git add index.html
 
@@ -71,3 +76,12 @@ git add index.html
 git status
 
         //le fichier index.html apparaît en vert
+
+git commit -m "message descriptif"
+
+        //enregistre les modifications indexées par la commande "git add" : cela crée la nouvelle version de votre projet
+        //Git crée la branche master
+
+git branch
+
+        //permet de voir que la branche "*master" vient d'être créer ("*" indique la branche sur laquelle vous travaillez actuellement) 
