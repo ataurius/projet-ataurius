@@ -89,6 +89,7 @@ git commit -m "message descriptif"
 git branch
 
         //permet de voir que la branche "*master" vient d'être créer ("*" indique la branche sur laquelle vous travaillez actuellement) 
+    
 
     4-Relier le dépôt local Git au dépôt distant GitHub
         
@@ -99,11 +100,11 @@ git remote add ProjetAtaurius https://github.com/ataurius/projet-ataurius.git
 
 git branch -M main
 
-    //relie le dépôt local au dépôt distant
+        //relie le dépôt local au dépôt distant
 
 git push -u ProjetAtaurius main
 
-    //envoie le projet sur le dépôt distant
+        //envoie le projet sur le dépôt distant
 
 
     4-Gestion des branches
@@ -121,3 +122,88 @@ git checkout langagejava
 
 git branch
 
+touch AfficherText.txt
+    
+        //création d'un fichier text pour le code java d'une fonction affichant du text
+
+git status
+
+git add *
+
+git commit -m "Ajout de la branche langagejava"
+
+git push -u ProjetAtaurius langagejava
+
+        //envoi des modification (création de la branche) au dépôt distant.
+    
+    
+    5-Fusionner la branche nouvelle à la branche principale 
+
+git checkout main
+        //permet de se placer dans la branche main
+
+git branch
+
+git merge langagejava
+
+        //modifications fusionnées
+
+
+    AUTRES COMMANDES 
+
+git clone https://github.com/ataurius/projet-ataurius.git
+
+        //copie un dépôt distant depuis GitHub
+
+git pull ProjetAtaurius main
+
+        //permet de voir s'il y a des MAJ depuis le dépôt distant à intégrer dans le dépôt local
+
+git branch -d langagejava
+        //supprime la branche "langagejava"
+
+git branch -M main
+        //renomme la branche principale "master" en "main" [!!! à vérifier !!!]
+
+git branch -D langagejava
+        //supprime la branche avec ses modifications éventuellement effectuer
+
+
+    PROTOCOLES
+
+    
+    1-Annuler une modification de la branche main
+
+cd ProjetAtaurius
+git bcheckout main
+touch FichierIndesirable.txt
+git add *
+
+        //la modification a été ajoutée à l'index MAIS n'a pas été "committée"
+
+git status
+
+git stash
+
+        //va mettre de coté la dernière indexation (dernier "staging")
+
+git status
+
+        //indiquera qu'aucune modification a été apportée
+
+git branch nomdelabranche
+
+git checkout nomdelabranche
+
+git stash list
+
+    //copier la remise souhaitée (juste le début de pattern "stash@{1}:...")
+
+git stash apply nomdelaremise
+
+
+    NOTES
+
+    1-Création de branche principale  : après avoir créer un dossier de projet et avoir initialisé le dépôt avec la commande "git init", il suffi de créer un fichier et de le "committer". La branche "main" est créée automatiquement.
+
+    2-la branche principale est nommée automatiquement "main" depuis octobre 2020 ; avant elle s'appelait "master".
