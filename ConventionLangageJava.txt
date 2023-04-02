@@ -1,0 +1,36 @@
+
+Convtion Camel Case : une phrase composée de plusieurs mots sans espaces ni ponctuation (premier mot en minuscules et les autres commencent par une majuscule)
+
+NOMMER UNE VARIABLE : nomVariableProgramme
+
+NOMMER UNE CONSTANTE : NOMVARIABLEPROGRAMME
+
+
+DECLARER UNE VARIABLE : (logique : TYPE + VARIABLE + VALEUR)
+    - "int" déclare un nombre entier : exemple "int x = 7;"
+    - "String" déclare une chaîne de caractères : exemple "String text = "Bonjour tout le monde !"
+    - "double" déclare un nombre avec décimaux : exemple "double y = 1,777
+    - "float" déclare un nombre avec moins de décimaux que "double"
+    - "long" déclare un nombre entier plus grand que celui que "int" peut déclarer
+    -
+
+DECLARER UNE CONSTANTE : 
+    - "final int JOURSDANSSEMAINE = 7"
+    - "final String MONPLATFAVORI = Pâte à la sauce tomate"
+
+FIN D'INSTRUCTION JAVA : ";"
+
+COMMENTAIRES : indiquer par "//" avant le commentaire
+
+OPERATEUR D'AFFECTATION : "="
+
+AFFECTATION : consiste à donner à une variable ("int x") une expression ("7") grâce à un opérateur d'affectation ("=")
+
+OPERATEURS D'AFFECTATION RACCOURCIS : 
+    - "int x = x + 23" rpeut être écrit "int x+= 23"
+
+BOOLEAN : Une valeur booléenne prend le plus petit emplacement de la mémoire de l'ordinateur : 1 bit (un bit ne peut avoir qu'une seule valeur : 0 ou 1 ; 8 bits = 1 octet ;  1000 octet = 1 024 bits). La valeur d'un boolean est "true" ou "false". Cette valeur peut être inversée par le Non logique "!" : exemple "boolean nomBool = true" : "nomBool = !nomBool" inversera la valeur true en valeur false
+
+FONCTION : bloc de code avec un nom, qui exécute un service
+
+METHODE : fonction située à l'intérieur d'une classe

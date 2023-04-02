@@ -1,0 +1,132 @@
+Problèmes rencontrés pour javac et commandes rentrées : 
+
+chataigne@chataigne:~$ javac -version
+La commande « javac » n'a pas été trouvée, mais peut être installée avec :
+sudo apt install default-jdk              # version 2:1.11-72build2, or
+sudo apt install openjdk-11-jdk-headless  # version 11.0.18+10-0ubuntu1~22.04
+sudo apt install openjdk-17-jdk-headless  # version 17.0.6+10-0ubuntu1~22.04
+sudo apt install openjdk-18-jdk-headless  # version 18.0.2+9-2~22.04
+sudo apt install openjdk-19-jdk-headless  # version 19.0.2+7-0ubuntu3~22.04
+sudo apt install openjdk-8-jdk-headless   # version 8u362-ga-0ubuntu1~22.04
+sudo apt install ecj                      # version 3.16.0-1
+
+chataigne@chataigne:~$ sudo apt install openjdk-19-jdk-headless
+[sudo] Mot de passe de chataigne :          
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait      
+Vous pouvez lancer « apt --fix-broken install » pour corriger ces problèmes.
+Les paquets suivants contiennent des dépendances non satisfaites :
+ jdk-17 : Dépend: libc6-i386 mais ne sera pas installé
+          Dépend: libc6-x32 mais ne sera pas installé
+E: Dépendances non satisfaites. Essayez « apt --fix-broken install » sans paquet
+   (ou indiquez une solution).
+
+chataigne@chataigne:~$ apt --fix-broken install
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait      
+Correction des dépendances... Fait
+Les paquets supplémentaires suivants seront installés : 
+  libc6-i386 libc6-x32
+Les NOUVEAUX paquets suivants seront installés :
+  libc6-i386 libc6-x32
+0 mis à jour, 2 nouvellement installés, 0 à enlever et 6 non mis à jour.
+1 partiellement installés ou enlevés.
+Il est nécessaire de prendre 5 815 ko dans les archives.
+Après cette opération, 25,4 Mo d'espace disque supplémentaires seront utilisés.
+
+Souhaitez-vous continuer ? [O/n] o
+Réception de :1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-i386 amd64 2.35-0ubuntu3.1 [2 837 kB]
+Réception de :2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-x32 amd64 2.35-0ubuntu3.1 [2 978 kB]
+5 815 ko réceptionnés en 5s (1 250 ko/s)   
+Sélection du paquet libc6-i386 précédemment désélectionné.
+(Lecture de la base de données... 623975 fichiers et répertoires déjà installés.
+)
+Préparation du dépaquetage de .../libc6-i386_2.35-0ubuntu3.1_amd64.deb ...
+Dépaquetage de libc6-i386 (2.35-0ubuntu3.1) ...
+Remplacés par des fichiers du paquet libc6:i386 (2.35-0ubuntu3.1) déjà installé.
+..
+Sélection du paquet libc6-x32 précédemment désélectionné.
+Préparation du dépaquetage de .../libc6-x32_2.35-0ubuntu3.1_amd64.deb ...
+Dépaquetage de libc6-x32 (2.35-0ubuntu3.1) ...
+Paramétrage de libc6-x32 (2.35-0ubuntu3.1) ...
+Paramétrage de libc6-i386 (2.35-0ubuntu3.1) ...
+Paramétrage de jdk-17 (17.0.6-ga) ...
+Traitement des actions différées (« triggers ») pour libc-bin (2.35-0ubuntu3.1) 
+...
+
+chataigne@chataigne:~$ sudo apt install openjdk-19-jdk-headless
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait      
+Paquets suggérés :
+  openjdk-19-demo openjdk-19-source
+Les NOUVEAUX paquets suivants seront installés :
+  openjdk-19-jdk-headless
+0 mis à jour, 1 nouvellement installés, 0 à enlever et 6 non mis à jour.
+Il est nécessaire de prendre 254 Mo dans les archives.
+Après cette opération, 263 Mo d'espace disque supplémentaires seront utilisés.
+Réception de :1 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 openjdk-19-jdk-headless amd64 19.0.2+7-0ubuntu3~22.04 [254 MB]
+254 Mo réceptionnés en 3min 17s (1 291 ko/s)                                   
+Sélection du paquet openjdk-19-jdk-headless:amd64 précédemment désélectionné.
+(Lecture de la base de données... 624544 fichiers et répertoires déjà installés.
+)
+Préparation du dépaquetage de .../openjdk-19-jdk-headless_19.0.2+7-0ubuntu3~22.0
+4_amd64.deb ...
+Dépaquetage de openjdk-19-jdk-headless:amd64 (19.0.2+7-0ubuntu3~22.04) ...
+Paramétrage de openjdk-19-jdk-headless:amd64 (19.0.2+7-0ubuntu3~22.04) ...
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jar
+ » pour fournir « /usr/bin/jar » (jar) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jar
+signer » pour fournir « /usr/bin/jarsigner » (jarsigner) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jav
+ac » pour fournir « /usr/bin/javac » (javac) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jav
+adoc » pour fournir « /usr/bin/javadoc » (javadoc) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jav
+ap » pour fournir « /usr/bin/javap » (javap) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jcm
+d » pour fournir « /usr/bin/jcmd » (jcmd) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jdb
+ » pour fournir « /usr/bin/jdb » (jdb) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jde
+prscan » pour fournir « /usr/bin/jdeprscan » (jdeprscan) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jde
+ps » pour fournir « /usr/bin/jdeps » (jdeps) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jfr
+ » pour fournir « /usr/bin/jfr » (jfr) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jim
+age » pour fournir « /usr/bin/jimage » (jimage) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jin
+fo » pour fournir « /usr/bin/jinfo » (jinfo) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jli
+nk » pour fournir « /usr/bin/jlink » (jlink) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jma
+p » pour fournir « /usr/bin/jmap » (jmap) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jmo
+d » pour fournir « /usr/bin/jmod » (jmod) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jps
+ » pour fournir « /usr/bin/jps » (jps) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jru
+nscript » pour fournir « /usr/bin/jrunscript » (jrunscript) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jsh
+ell » pour fournir « /usr/bin/jshell » (jshell) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jst
+ack » pour fournir « /usr/bin/jstack » (jstack) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jst
+at » pour fournir « /usr/bin/jstat » (jstat) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jst
+atd » pour fournir « /usr/bin/jstatd » (jstatd) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jwe
+bserver » pour fournir « /usr/bin/jwebserver » (jwebserver) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/ser
+ialver » pour fournir « /usr/bin/serialver » (serialver) en mode automatique
+update-alternatives: utilisation de « /usr/lib/jvm/java-19-openjdk-amd64/bin/jhs
+db » pour fournir « /usr/bin/jhsdb » (jhsdb) en mode automatique
+
+chataigne@chataigne:~$ javac --version
+javac 19.0.2
+
+chataigne@chataigne:~$ 
+
