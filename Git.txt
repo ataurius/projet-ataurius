@@ -168,6 +168,18 @@ git branch -D langagejava
 
 git commit --amend -m "Votre nouveau message de commit"
         //permet de modifier le message du dernier commit s'il n'y a eu aucune modification
+        //entrer "git log" pour vérifier
+
+git reset --soft 
+        //ne supprime aucun fichier, ramène aux fichiers "stagés" avant le commit
+
+git reset --mixed 
+        //ramène en arrière, après un commit, jusqu'au dernier commit (aucune suppression effetué non plus)
+        //paramètre par défaut de git reset ("git reset HEAD~" = "git reset --mixed HEAD~")
+            // le "HEAD" est un pointeur
+
+git reset --hard 
+        //supprime définitvement tout le dernier commit (ATTENTION !! aucun retour en arrière possible !!)
 
 
     PROTOCOLES
@@ -198,7 +210,7 @@ git stash list
 git stash apply nomdelaremise
 
 
-    2-Annuler une modification de la branche main (avec commit effectué)
+    2-Annuler une modification de la branche main (avec commit effectué) pour la transférer à une branche (à créer)
 
 git log
 
@@ -210,17 +222,68 @@ git reset --hard HEAD^
 
 git branch nouvellebranche
 
-git checkout nouvelle branche
+git checkout nouvellebranche
 
 git reset --hard 88af3e1e
 
-        //les 8 premeirs caractères suffisent
-git 
+        //les 8 premiers caractères suffisent
 
 
+    3-Insérer un fichier oublié dans le dernier commit effectué
+
+git add Nomdufichier.extension
+
+git status
+
+git commit --amend --no-edit
+
+
+    4-Retirer un mauvais fichier du dernier commit effectué
+
+git revert HEAD
+
+        //revient à l'état précédent avant le dernier commit, sans le supprimer
+        //vous créerez donc un nouveau commit avec l'ancien commit dans l'historique
+        //vous pouvez supprimer un fichier, puis faire le nouveau commit
+
+
+    5-Voyager dans le temps avec Git
+
+git log
+    
+        //retrace l'historique inversé de tout vos commit
+        //vous permez d'obtenir le SHA (Secure Hash Algorithm) des commit
+
+git reflog
+
+        //affiche les commits ainsi que toutes les autres actions que vous avez pu faire en local 
+
+git blame MonFichier.txt
+
+        //retrace tout l'historique, ligne par ligne, du fichier "MonFichier.txt" (qui a écrit, quoi, quand, etc = mode super espion)
+
+
+    6-Fonction Cherry pick de Git
+
+    //permet de ne sélectionner qu'une partie d'une branche (sélection un ou pls commit) pour la fusionner à la branche principale
+
+git log
+    
+        //sélectionner le hash du commit (8 premiers caractères)
+
+git cherry-pick hashducommit
+
+        //intègre le commit choisi à la branche principale
+
+git log
+
+        //pour vérifier l'intégration du commit
+    
 
     NOTES
 
     1-Création de branche principale  : après avoir créer un dossier de projet et avoir initialisé le dépôt avec la commande "git init", il suffi de créer un fichier et de le "committer". La branche "main" est créée automatiquement.
 
     2-la branche principale est nommée automatiquement "main" depuis octobre 2020 ; avant elle s'appelait "master".
+
+
