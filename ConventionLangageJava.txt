@@ -34,3 +34,49 @@ BOOLEAN : Une valeur booléenne prend le plus petit emplacement de la mémoire d
 FONCTION : bloc de code avec un nom, qui exécute un service
 
 METHODE : fonction située à l'intérieur d'une classe
+
+
+
+equals : méthode de class String pour comaprer deux chaînes (compare le contenu) : peut être utilsiée comme condition
+
+OPERATEURS DE COMPARAISON :
+==  égal à (exactement le même) ;
+
+!=  non égal à (différent, de quelque façon que ce soit) ;
+
+<  inférieur à ;
+
+<=  inférieur ou égal à ;
+
+>  supérieur à ;
+
+>=  supérieur ou égal à
+
+OPERATEURS LOGIQUES : permettent de combiner des valeurs booléennes (soit des valeurs booléennes spécifiques, soit des résultats d'expressions)
+    && (ET logique) : le résultat n'est vrai que si toutes les parties participantes sont vraies.
+
+    ||  (OU logique) : le résultat est vrai si au moins une des parties participantes est vraie.
+
+    !  (NON logique) : inverse simplement l'expression donnée.
+
+
+
+
+
+
+SYNTAXE : 
+
+
+for (initialisation; terminaison; increment) {
+// code à répéter
+}
+
+
+while (logicalExpression) {
+// liste de déclarations
+}
+
+
+do {
+// instructions
+} while(logicalExpression);

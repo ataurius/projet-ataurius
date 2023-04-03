@@ -1,0 +1,105 @@
+package com.projetataurius;
+
+public class POOPenserEcrireClass {
+
+	public static void main(String[] args) {
+		fonction1();
+		fonction2();
+
+	}
+
+	public static void fonction1() {
+		/**
+		 * Déclaration et nomination d'un objet de type Concept1Attribut 3, puis grâce à
+		 * "new", création d'une nouvelle instance de la class Concept1Attribut3 suivi
+		 * du constructeur. Ensuite, attribution d'une valeur à l'argument. Et enfin,
+		 * avec "println" on utilise l'objet conceptualisé (Concept1Attribut3) et on
+		 * récupère son attribut (attribut3concept1)
+		 */
+		Concept1Attribut3 nomattribut3concept1 = new Concept1Attribut3("Valeur attribut 3 concept 1");
+		System.out.println(nomattribut3concept1.attribut3concept1);
+	}
+
+	public static void fonction2() {
+
+		Concept1Attribut3 nomattribut3concept1 = new Concept1Attribut3("Valeur attribut 3 concept 1");
+		Concept1 nomattribut1concept1 = new Concept1(7, "Valeur inconnue", nomattribut3concept1);
+		Concept1 nomattribut2concept1 = new Concept1(7, "Valeur attribut 2 concept 1", nomattribut3concept1);
+
+		System.out.println(nomattribut1concept1.attribut1concept1);
+		System.out.println(nomattribut2concept1.attribut2concept1);
+
+	}
+}
+
+/** Création d'un concept à écrire en java (à traduire en class) */
+
+class Concept1 {
+	int attribut1concept1;
+	String attribut2concept1;
+	Concept1Attribut3 attribut3concept1;
+
+	/** Création de constructeur */
+
+	public Concept1(int attribut1concept1, String attribut2concept1, Concept1Attribut3 attribut3concept1) {
+
+		/** Mise à jour de la valeur des attributs par les argument */
+
+		this.attribut1concept1 = attribut1concept1;
+		this.attribut2concept1 = attribut2concept1;
+		this.attribut3concept1 = attribut3concept1;
+	}
+
+}
+
+/** Création d'un concept d'attribut n'existant pas encore java */
+
+class Concept1Attribut3 {
+	String attribut3concept1;
+
+	/** Création de constructeur */
+
+	public Concept1Attribut3(String attribut3concept1) {
+
+		/** Mise à jour de la valeur des attributs par les argument */
+
+		this.attribut3concept1 = attribut3concept1;
+
+	}
+
+}
+
+/** Création d'un concept à écrire en java (àtraduire en class) */
+
+class Concept2 {
+	int attribut1concept2;
+	String attribut2concept2;
+	Concept1Attribut3 attribut3concept2;
+	Concept2Attribut4 attribut4concept2;
+
+	/** Création de constructeur */
+
+	public Concept2(int attribut1concept2, String attribut2concept2, Concept1Attribut3 attribut3concept2,
+			Concept2Attribut4 attribut4concept2) {
+
+		/** Mise à jour de la valeur des attributs par les argument */
+
+		this.attribut1concept2 = attribut1concept2;
+		this.attribut2concept2 = attribut2concept2;
+		this.attribut3concept2 = attribut3concept2;
+		this.attribut4concept2 = attribut4concept2;
+	}
+
+}
+
+/** Création d'un concept d'attribut n'existant pas encore java */
+
+class Concept2Attribut4 {
+	int attribut4concept2;
+
+	public Concept2Attribut4(int attribut4concept2) {
+
+		this.attribut4concept2 = attribut4concept2;
+	}
+}
+

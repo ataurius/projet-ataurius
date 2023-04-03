@@ -1,0 +1,17 @@
+package com.projetataurius;
+
+public class AppelMethode {
+
+	public static void main(String[] args) {
+
+		String texte1 = "Bonjour !";
+
+		texte1 = texte1.toUpperCase();
+
+		texte1 = texte1.replace("JOUR", "SOIR");
+
+		System.out.println(texte1);
+	}
+
+}
+
