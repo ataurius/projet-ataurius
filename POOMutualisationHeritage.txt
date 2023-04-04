@@ -13,6 +13,7 @@ public class POOMutualisationHeritage {
 }
 
 class AlphaBeta {
+	/** Création d'une methode "pointcommun" */
 	void pointcommun() {
 		System.out.println("Valeur du point commun");
 	}
