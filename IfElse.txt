@@ -1,0 +1,22 @@
+package com.projetataurius;
+
+public class IfElse {
+
+	public static void main(String[] args) {
+		if (getBoolean()) {
+			console("if");
+		} else {
+			console("else");
+
+		}
+	}
+
+	static void console(String texte) {
+		System.out.println("Condition : " + texte);
+	}
+
+	static boolean getBoolean() {
+		return true;
+	}
+}
+

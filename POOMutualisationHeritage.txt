@@ -1,0 +1,28 @@
+package com.projetataurius;
+
+public class POOMutualisationHeritage {
+
+	public static void main(String[] args) {
+		ConceptAlpha nomconceptalpha = new ConceptAlpha();
+		ConceptBeta nomconceptbeta = new ConceptBeta();
+		nomconceptalpha.pointcommun();
+		nomconceptbeta.pointcommun();
+
+	}
+
+}
+
+class AlphaBeta {
+	void pointcommun() {
+		System.out.println("Valeur du point commun");
+	}
+
+}
+
+class ConceptAlpha extends AlphaBeta {
+
+}
+
+class ConceptBeta extends AlphaBeta {
+
+}

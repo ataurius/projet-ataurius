@@ -1,0 +1,33 @@
+package com.projetataurius;
+
+public class BoucleDoWhile {
+
+	public static void main(String[] args) {
+		exemple1();
+		exemple2();
+	}
+
+	public static void exemple1() {
+		int attribut1 = 10;
+		do {
+			System.out.println("Texte à Afficher");
+			attribut1 -= 1;
+		} while (attribut1 > 0);
+
+	}
+
+	public static void exemple2() {
+		// Boucle "While"
+		int attribut2 = 10;
+		while (attribut2 > 0) {
+			System.out.println("Texte 2 à afficher");
+			attribut2 -= 1;
+		}
+		// Boucle "do/while"
+		int attribut3 = 4;
+		do {
+			System.out.println("Texte 3 à afficher");
+			attribut3 -= 1;
+		} while (attribut3 > 0);
+	}
+}

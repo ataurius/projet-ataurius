@@ -1,0 +1,12 @@
+    //Permet de sécuriser la connexion entre votre réseau et le dépôt distant
+
+$ ssh-keygen -t rsa -b 4096 -C "monadresse@mail.com"
+
+        //génère la paire de clés SSH public et privé
+        //la console demande si vous souhaitez créer le fichier et où (appuyez juste sur "entrée)
+        //entrez un MDP et confirmer le MDP
+        //Retenez le chemin d'accès des fichiers créés (dossier caché ".ssh")
+        //le fichier "id-rsa.txt" contient la clé privée et le fichier "id-rsa.pub" contient la clé publique
+        //ouvrez le fichier de la clé publique et copier le code
+        //allez sur votre compte GitHub > Votre compte > Settings > SSH and GPG Keys
+        //créez une nouvelle clé SSH et suivez les instructions

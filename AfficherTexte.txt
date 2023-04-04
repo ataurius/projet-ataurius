@@ -3,8 +3,8 @@ package com.projetataurius;
 public class AfficherTexte {
 
 	public static void main(String[] args) {
-		
-		System.out.println("Bonjour tout le monde !");
+
+		System.out.println("Texte à afficher");
 
 	}
 

@@ -1,0 +1,22 @@
+package com.projetataurius;
+
+public class ChaineCaracteres {
+
+	public static void main(String[] args) {
+
+		String texte1 = "Chaîne de texte 1";
+
+		String texte2 = "Chaîne de texte 2";
+
+		int nombreRepetition = 7;
+		int nombreRepetitionBis = 9;
+
+		String ensembleTextes = "J'ai besoin d'afficher la " + texte1 + " (" + nombreRepetition + "fois), et la "
+				+ texte2 + " (" + nombreRepetitionBis + " fois).";
+
+		System.out.println(ensembleTextes);
+
+	}
+
+}
+

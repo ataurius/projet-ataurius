@@ -1,0 +1,14 @@
+package com.projetataurius;
+
+public class AppelClass {
+
+	public static void main(String[] args) {
+
+		PorteeVariables.fonction1();
+		BoucleFor.main(args);
+		System.out.println(PorteeVariables.variable);
+
+	}
+
+}
+

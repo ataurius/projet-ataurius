@@ -4,11 +4,11 @@ public class AppelMethode {
 
 	public static void main(String[] args) {
 
-		String texte1 = "Bonjour !";
+		String texte1 = "Texte à afficher";
 
 		texte1 = texte1.toUpperCase();
 
-		texte1 = texte1.replace("JOUR", "SOIR");
+		texte1 = texte1.replace("À AFFICHER", "MODIFIÉ DEVANT APPARAÎTRE");
 
 		System.out.println(texte1);
 	}

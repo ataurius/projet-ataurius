@@ -1,0 +1,37 @@
+package com.projetataurius;
+
+public class BoucleWhile {
+
+	public static void main(String[] args) {
+		boucle();
+		autreExemple();
+	}
+
+	public static void boucle() {
+		int i = 0;
+
+		while (i < 90) {
+			i = randomNumber();
+			print(i);
+		}
+	}
+
+	public static void print(int nombre) {
+		System.out.println("Fonction random number : " + (nombre));
+	}
+
+	public static int randomNumber() {
+		return (int) ((Math.random() * ((100 - 1) + 1)) + 1);
+	}
+
+	public static void autreExemple() {
+		int attribut1 = 0;
+		while (attribut1 < 10) {
+			attribut1 += 1;
+			System.out.println("(Texte de début) " + attribut1 + " (texte de fin).");
+		}
+
+		System.out.println("Démonstration finie !");
+	}
+}
+

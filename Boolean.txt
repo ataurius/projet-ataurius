@@ -1,0 +1,21 @@
+package com.projetataurius;
+
+public class Boolean {
+
+	public static void main(String[] args) {
+		if (lienBoolean()) {
+			fonction("ça marche !");
+
+		}
+
+	}
+
+	public static void fonction(String texte) {
+		System.out.println("Exemple de la fonctionnalité boolean : " + texte + ".");
+	}
+
+	static boolean lienBoolean() {
+		return true;
+	}
+}
+

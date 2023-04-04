@@ -1,0 +1,13 @@
+package com.projetataurius;
+
+import java.time.LocalDateTime;
+
+public class DateHeure {
+
+	public static void main(String[] args) {
+
+		System.out.println("Date et heure du jour : " + LocalDateTime.now());
+
+	}
+}
+

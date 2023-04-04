@@ -1,0 +1,34 @@
+package com.projetataurius;
+
+public class MelangeTypeNumerique {
+
+	public static void main(String[] args) {
+		int a = 5;
+		float b = 2;
+		float c = a / b;
+
+		System.out.println("Résultat de a / b = " + c);
+
+	}
+
+	// ce qui suit n'apparaît pas !! à corriger à l'occasion
+	public static void correction(String[] args) {
+
+		float j = 5;
+		int k = 2;
+		float l = j / k;
+
+		System.out.println("Résultat de j / k = " + l);
+	}
+
+	// ce qui suit n'apparaît pas !! à corriger à l'occasion
+	public static void cast(String[] args) {
+
+		int m = 5;
+		int n = 2;
+		float o = (float) m / n;
+
+		System.out.println("Résultat de m / n = " + o);
+	}
+}
+

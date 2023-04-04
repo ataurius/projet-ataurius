@@ -1,0 +1,15 @@
+package com.projetataurius;
+
+public class Operations {
+
+	public static void main(String[] args) {
+		int x = 10;
+		int y = 75;
+		int z = x + y;
+		
+		System.out.println("Somme de x+y = " + z);
+
+	}
+
+}
+

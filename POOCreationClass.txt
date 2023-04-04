@@ -1,6 +1,6 @@
 package com.projetataurius;
 
-public class POOPenserEcrireClass {
+public class POOCreationClass {
 
 	public static void main(String[] args) {
 		fonction1();

@@ -1,0 +1,60 @@
+
+
+
+- créer un dossier "rootprojet"
+- créer dans ce dossier un dossier "monpackage"
+- créer dans ce sous-dossier un fichier "testprojet.java"
+
+
+Commandes tapées : 
+
+cd Téléchargements
+mkdir rootprojet
+cd rootprojet
+mkdir monpackage
+cd monpackage
+touch testprojet.java
+open testprojet.java
+
+
+
+
+
+
+copier-coller (en modifiant les références nécessaires) : 
+
+package hello;
+
+/** Ceci est une implémentation du message traditionnel "Hello world!"
+
+* @author L'équipe Education d'OpenClassrooms
+
+*/
+
+public class HelloWorld {
+
+    /** Le programme commence ici */
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello World!");
+
+    }
+
+}
+
+
+
+
+
+
+
+- remonter au dossier "rootprojet" et entrer la commande : 
+
+javac monpackage/testprojet.java
+
+
+
+- vérifier l'exécutable créer : 
+
+java monâckage.testprojet.class

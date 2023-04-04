@@ -1,0 +1,16 @@
+package com.projetataurius;
+
+public class Variables {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		for (int i = 0; i < 5; i++) {
+			bonjour("Texte 1");
+			Thread.sleep(1000);
+		}
+	}
+
+	static void bonjour(String nom) {
+		System.out.println("Texte 1 " + nom + " suite du texte 1.");
+	}
+}
