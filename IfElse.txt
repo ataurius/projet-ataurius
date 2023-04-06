@@ -3,19 +3,23 @@ package com.projetataurius;
 public class IfElse {
 
 	public static void main(String[] args) {
-		if (getBoolean()) {
-			console("if");
+		methodeIf();
+	}
+
+	private static void methodeIf() {
+		if (conditionBoolean()) {
+			fonctionMethodeIf("if");
 		} else {
-			console("else");
+			fonctionMethodeIf("else");
 
 		}
 	}
 
-	static void console(String texte) {
+	private static void fonctionMethodeIf(String texte) {
 		System.out.println("Condition : " + texte);
 	}
 
-	static boolean getBoolean() {
+	private static boolean conditionBoolean() {
 		return true;
 	}
 }

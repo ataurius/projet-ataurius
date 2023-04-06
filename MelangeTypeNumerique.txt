@@ -3,16 +3,22 @@ package com.projetataurius;
 public class MelangeTypeNumerique {
 
 	public static void main(String[] args) {
+
+		erreur();
+		correction();
+		correctionCast();
+
+	}
+
+	public static void erreur() {
 		int a = 5;
 		float b = 2;
 		float c = a / b;
 
 		System.out.println("Résultat de a / b = " + c);
-
 	}
 
-	// ce qui suit n'apparaît pas !! à corriger à l'occasion
-	public static void correction(String[] args) {
+	public static void correction() {
 
 		float j = 5;
 		int k = 2;
@@ -21,8 +27,7 @@ public class MelangeTypeNumerique {
 		System.out.println("Résultat de j / k = " + l);
 	}
 
-	// ce qui suit n'apparaît pas !! à corriger à l'occasion
-	public static void cast(String[] args) {
+	public static void correctionCast() {
 
 		int m = 5;
 		int n = 2;

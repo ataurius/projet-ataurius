@@ -1,0 +1,44 @@
+package com.projetataurius;
+
+public class Brouillon {
+
+	enum Concept {
+		parametre1, parametre2, parametre3, parametre4;
+	}
+
+	public static void main(String[] args) {
+		appelFonction1(args);
+		appelFonction2(args);
+
+	}
+
+	private static void appelFonction1(String[] args) {
+		Concept parameter = Concept.parametre2;
+		switch (parameter) {
+		case parametre1:
+			System.out.println("Sélection paramètre 1");
+			break;
+		case parametre2:
+			System.out.println("Sélection paramètre 2");
+			break;
+		case parametre3:
+			System.out.println("Sélection paramètre 3");
+			break;
+		case parametre4:
+			System.out.println("Sélection paramètre 4");
+			break;
+		}
+	}
+
+	private static void appelFonction2(String[] args) {
+		Concept parameter = Concept.parametre2;
+		switch (parameter) {
+		case parametre1:
+			System.out.println("Sélection paramètre 1");
+			break;
+		default:
+			System.out.println("Autres paramètres sélectionnés");
+		}
+	}
+}
+

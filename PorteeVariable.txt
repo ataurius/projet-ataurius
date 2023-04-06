@@ -2,12 +2,9 @@ package com.projetataurius;
 
 public class PorteeVariables {
 
-	static String variable = "Texte à Afficher";
+	private final static String variableClass = "Variable de classe !";
 
-	/**
-	 * en déclarant la varibale au niveau de la class, toute les fonctions pourront
-	 * y faire appel
-	 */
+	public static String variablePackage = "Variable de package !";
 
 	public static void main(String[] args) {
 		fonction1();
@@ -16,18 +13,17 @@ public class PorteeVariables {
 	}
 
 	public static void fonction1() {
+		String variablefonction1 = "Variable de methode - methode portée package";
 
-		/**
-		 * Si on déclare ici la variable la fonction2 ne pourra pas faire appel à la
-		 * variable limitée à la fonction1 C'est pourquoi on déclare la variable pour la
-		 * class entière avec static
-		 */
-
-		System.out.println(variable);
+		System.out.println(variableClass);
+		System.out.println(variablefonction1);
 	}
 
-	public static void fonction2() {
-		System.out.println(variable);
+	private static void fonction2() {
+		String variablefonction2 = "Variable de methode - méthode portée class";
+
+		System.out.println(variablePackage);
+		System.out.println(variablefonction2);
 	}
 
 }

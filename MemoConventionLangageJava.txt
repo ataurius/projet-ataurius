@@ -1,18 +1,44 @@
 
-Convtion Camel Case : une phrase composée de plusieurs mots sans espaces ni ponctuation (premier mot en minuscules et les autres commencent par une majuscule)
+Convention Camel Case : une phrase composée de plusieurs mots sans espaces ni ponctuation (premier mot en minuscules et les autres commencent par une majuscule)
+
+
+
+FONCTION : bloc de code avec un nom, qui exécute un service
+<=>
+METHODE : fonction située à l'intérieur d'une classe
+
+VARIABLE : outil contenant une donnée (mot, chiffre, etc) utilisée par un programme (un programme manipule des variables soit données, soit créées par le programme lui-même !)
+
+CONSTANTE : c'est une variable dont la valeur ne change pas (l'ordinateur ira plus vite car il n'aura pas besoin de calculer des valeurs alternatives éventuelles)
+
+VALEUR : c'est la donnée stockée dans la variable 
+
+DECLARATION DE VARIABLE : c'est le fait de déclarer au programme qu'une variable existe 
+
+TYPE (de variable) : dépend de la nature de la valeur stockée par la variable. En fonction du type déclarée, la variable ne prend pas la même place sur la mémoire du pc !
+
+
+
+
+CLASS : ensemble de variables (appelées attributs) et de comportements (appelés méthodes)
+
+
+
+
+FONCTION MAIN : point d'entére du programme (contient le code de démarrage du programme Java - "main" est à la fois une class et un package)
+
+
 
 NOMMER UNE VARIABLE : nomVariableProgramme
 
 NOMMER UNE CONSTANTE : NOMVARIABLEPROGRAMME
 
-
-DECLARER UNE VARIABLE : (logique : TYPE + VARIABLE + VALEUR)
+DECLARER UNE VARIABLE : (logique : [type] [variable] = [valeur])
     - "int" déclare un nombre entier : exemple "int x = 7;"
     - "String" déclare une chaîne de caractères : exemple "String text = "Bonjour tout le monde !"
     - "double" déclare un nombre avec décimaux : exemple "double y = 1,777
     - "float" déclare un nombre avec moins de décimaux que "double"
     - "long" déclare un nombre entier plus grand que celui que "int" peut déclarer
-    -
 
 DECLARER UNE CONSTANTE : 
     - "final int JOURSDANSSEMAINE = 7"
@@ -20,26 +46,61 @@ DECLARER UNE CONSTANTE :
 
 FIN D'INSTRUCTION JAVA : ";"
 
-COMMENTAIRES : indiquer par "//" avant le commentaire
+COMMENTAIRES : indiquer par "//" avant le commentaire ou alors encadrés par "/**" et "*/"
+
+
+
+
+
+AFFECTATION : consiste à donner à une variable ("int x") une expression ("7") grâce à un opérateur d'affectation ("="). L'expression est une affectation qui produit une valeur !
 
 OPERATEUR D'AFFECTATION : "="
 
-AFFECTATION : consiste à donner à une variable ("int x") une expression ("7") grâce à un opérateur d'affectation ("=")
-
 OPERATEURS D'AFFECTATION RACCOURCIS : 
-    - "int x = x + 23" rpeut être écrit "int x+= 23"
-
-BOOLEAN : Une valeur booléenne prend le plus petit emplacement de la mémoire de l'ordinateur : 1 bit (un bit ne peut avoir qu'une seule valeur : 0 ou 1 ; 8 bits = 1 octet ;  1000 octet = 1 024 bits). La valeur d'un boolean est "true" ou "false". Cette valeur peut être inversée par le Non logique "!" : exemple "boolean nomBool = true" : "nomBool = !nomBool" inversera la valeur true en valeur false
-
-FONCTION : bloc de code avec un nom, qui exécute un service
-
-METHODE : fonction située à l'intérieur d'une classe
+    - "int x = x + 23" peut être écrit "int x += 23"
 
 
 
-equals : méthode de class String pour comaprer deux chaînes (compare le contenu) : peut être utilsiée comme condition
+
+
+
+
+BOOLEAN : une valeur booléenne prend le plus petit emplacement de la mémoire de l'ordinateur : 1 bit (un bit ne peut avoir qu'une seule valeur : 0 ou 1 ; 8 bits = 1 octet ;  1000 octet = 1 024 bits). La valeur d'un boolean est "true" ou "false". Cette valeur peut être inversée par le Non logique "!" : exemple "boolean nomBool = true" : "nomBool = !nomBool" inversera la valeur true en valeur false
+
+
+
+
+TYPES PRIMITIFS : 
+
+int : stocke des nombres entiers
+
+long : stocke des nombres entiers plus grand que int
+
+float : stocke des nombres décimaux
+
+double : stocke des nombres décimaux avec plus de chiffres après la virgule que float
+
+    - (double prendra plus de place dans la mémoire, mais float pourrait ne pas suffire à stocker la valeur voulu !)
+
+
+AUTRES TYPES : 
+
+String : c'est un objet (majuscule en début de mot)
+
+System : instruction avec une classe utilitaire (la classe n'a pas besoin d'être instanciée pour être  utilisée).
+
+
+
+
+
+equals : méthode de class String pour comparer deux chaînes (compare le contenu) : peut être utilsiée comme condition
+
+
+
+
 
 OPERATEURS DE COMPARAISON :
+
 ==  égal à (exactement le même) ;
 
 !=  non égal à (différent, de quelque façon que ce soit) ;
@@ -52,19 +113,31 @@ OPERATEURS DE COMPARAISON :
 
 >=  supérieur ou égal à
 
-OPERATEURS LOGIQUES : permettent de combiner des valeurs booléennes (soit des valeurs booléennes spécifiques, soit des résultats d'expressions)
+OPERATEURS LOGIQUES : permettent de combiner des valeurs booléennes (soit des valeurs booléennes spécifiques, soit des résultats d'expressions): 
+
     && (ET logique) : le résultat n'est vrai que si toutes les parties participantes sont vraies.
 
     ||  (OU logique) : le résultat est vrai si au moins une des parties participantes est vraie.
 
     !  (NON logique) : inverse simplement l'expression donnée.
 
+Ordre de hiérarchie : ! > && > ||
+
+
+
+
+
+BOUCLE : technique permettant de répéter une ou plusieurs instructions sans avoir à retaper le même ensemble d'instructions plusieurs fois
+
+CONCATENER : mettre bout à bout des chaînes de caractères (ou nombres) et des varibales
 
 
 
 
 
 SYNTAXE : 
+
+[type] [variable] = [valeur]
 
 
 for (initialisation; terminaison; increment) {
@@ -80,3 +153,22 @@ while (logicalExpression) {
 do {
 // instructions
 } while(logicalExpression);
+
+
+
+
+
+
+CONTRÔLE DES ACCES : 
+
+public : variable, méthode ou class accessible à tout le programme
+private : accessibilité au contexte 
+protected : accessibilité étendue au package et ses sous-class
+package-protected : étendue au package 
+
+
+
+
+
+
+

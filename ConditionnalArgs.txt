@@ -1,0 +1,43 @@
+package com.projetataurius;
+
+public class ConditionnalArgs {
+
+	public static void main(String[] args) {
+		methodeConditionnalIfElse(args);
+		methodeConditionnalSwitch(args);
+
+	}
+
+	private static void methodeConditionnalIfElse(String[] args) {
+		if (args.length == 1) {
+			appelFonction(args[0]);
+		} else if (args.length == 2) {
+			appelFonction(args[0] + "-" + args[1]);
+		} else if (args.length == 3) {
+			appelFonction(args[0] + "-" + args[1] + "-" + args[2]);
+		} else {
+			appelFonction("pas d'argument(s) renseignés");
+		}
+
+	}
+
+	private static void appelFonction(String variable) {
+		System.out.println("Chaîne de caractères non variable " + variable + "!");
+	}
+
+	private static void methodeConditionnalSwitch(String[] args) {
+		switch (args.length) {
+		case 0:
+			appelFonction("aucun argument switch");
+			break;
+		case 1:
+			appelFonction(args[0]);
+			break;
+		case 2:
+			appelFonction(args[0] + "-" + args[1]);
+			break;
+		default:
+			System.out.println("Nombre d'arguments non géré");
+		}
+	}
+}

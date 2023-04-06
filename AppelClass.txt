@@ -3,12 +3,15 @@ package com.projetataurius;
 public class AppelClass {
 
 	public static void main(String[] args) {
-
-		PorteeVariables.fonction1();
+		appelMethode();
 		BoucleFor.main(args);
-		System.out.println(PorteeVariables.variable);
 
 	}
 
+	private static void appelMethode() {
+		PorteeVariables.fonction1();
+		System.out.println(PorteeVariables.variablePackage);
+
+	}
 }
 

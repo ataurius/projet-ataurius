@@ -3,10 +3,12 @@ package com.projetataurius;
 public class AfficherTexte {
 
 	public static void main(String[] args) {
-
-		System.out.println("Texte à afficher");
+		methode();
 
 	}
 
+	private static void methode() {
+		System.out.println("Texte à afficher");
+	}
 }
 

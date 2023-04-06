@@ -1,0 +1,30 @@
+package com.projetataurius;
+
+public class MultiArray {
+
+	public static void main(String[] args) {
+		methode();
+		javadoc();
+	}
+
+	public static void methode() {
+		String[][] tableaumulti = new String[5][5];
+
+		tableaumulti[0][0] = "Dimension 1 Dimension 1";
+		tableaumulti[0][1] = "Dimension 1 Dimension 2";
+		tableaumulti[3][4] = "Dimension 3 Dimension 5";
+
+		System.out.println(tableaumulti[0][0]);
+
+	}
+
+	public static void javadoc() {
+		String[][] names = { { "A", "B", "C" }, { "a", "b" } };
+
+		// Mr. Smith
+		System.out.println(names[0][0] + names[1][0]);
+		// Ms. Jones
+		System.out.println(names[0][2] + names[1][1]);
+	}
+}
+
